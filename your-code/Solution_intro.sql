@@ -12,11 +12,12 @@ CREATE TABLE IF NOT EXISTS `cars`.`cars` (
   `year_` INT NOT NULL,
   `color` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`car_id`));
-
-
+  
+ 
 -- -----------------------------------------------------
 -- Table `cars`.`costumer`
--- -----------------------------------------------------
+-- ----------------------------------------------------- 
+  
 CREATE TABLE IF NOT EXISTS `cars`.`costumer` (
   `costumer_id` INT NOT NULL,
   `first_name` VARCHAR(20) NOT NULL,
@@ -32,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `cars`.`costumer` (
   PRIMARY KEY (`costumer_id`));
 
 
-  
   -- -----------------------------------------------------
 -- Table `cars`.`salesperson`
 -- -----------------------------------------------------
@@ -41,11 +41,12 @@ CREATE TABLE IF NOT EXISTS `cars`.`salesperson` (
   `first_name` VARCHAR(40) NOT NULL,
   `store_name` VARCHAR(3) NOT NULL,
   PRIMARY KEY (`salesperson_id`));
-
-- -----------------------------------------------------
+  
+  
+  - -----------------------------------------------------
 -- Table `cars`.`invoices`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cars`.`invoices` (
+  CREATE TABLE IF NOT EXISTS `cars`.`invoices` (
   `invoice_id` INT NOT NULL,
   `date_` DATE NULL DEFAULT NULL,
   `car` VARCHAR(20) NOT NULL,
@@ -73,6 +74,4 @@ CREATE TABLE IF NOT EXISTS `cars`.`invoices` (
     REFERENCES `cars`.`costumer` (`costumer_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-
-
 
